@@ -98,43 +98,6 @@
             </div>
         </footer>        
     </div>
-
-    <!-- Modal Form for Adding a Task -->
-    <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="taskModalLabel">Add New Task</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-            <form id="taskForm">
-                <div class="mb-3">
-                <label for="taskTitle" class="form-label">Activity Name</label>
-                <input type="text" class="form-control" id="taskTitle" required>
-                </div>
-                <div class="mb-3">
-                <label for="taskImage" class="form-label">Cover Image URL</label>
-                <input type="url" class="form-control" id="taskImage" required>
-                </div>
-                <div class="mb-3">
-                <label for="taskDescription" class="form-label">Activity Description</label>
-                <textarea class="form-control" id="taskDescription" required></textarea>
-                </div>
-                <div class="mb-3">
-                <label for="taskPriority" class="form-label">Priority Level (0-5)</label>
-                <input type="number" class="form-control" id="taskPriority" min="0" max="5" required>
-                </div>
-                <div class="mb-3">
-                <label for="taskDeadline" class="form-label">Activity Deadline</label>
-                <input type="datetime-local" class="form-control" id="taskDeadline" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Add Task</button>
-            </form>
-            </div>
-        </div>
-        </div>
-    </div>
     <!-- ------ -->
     <!-- JavaScript -->
     <script src="js_folder/script.js"></script>
