@@ -1,0 +1,74 @@
+[
+    {
+        "id":"0",
+        "activityName":"Dermatologist",
+        "coverImage": "https://cdn.pixabay.com/photo/2017/09/06/20/35/woman-2722936_1280.jpg",
+        "activityDescription": "Hietzinger Hauptstrasse 116/4, 1130 Wien",
+        "priorityLevel": 0,
+        "activityDeadline": "17/02/2025 3pm",
+        "shownFeature": true
+    },
+    {
+        "id":"1",
+        "activityName":"Dentist",
+        "coverImage": "https://cdn.pixabay.com/photo/2017/07/23/10/44/dentist-2530990_1280.jpg", 
+        "activityDescription": "Geylinggasse 27/16, 1130 Wien",
+        "priorityLevel": 0,
+        "activityDeadline": "18/02/2025 3pm",
+        "shownFeature": true
+    },
+    {
+        "id":"2",
+        "activityName":"Blood Analysis",
+        "coverImage": "https://cdn.pixabay.com/photo/2017/08/07/13/05/blood-donation-2603649_1280.jpg",
+        "activityDescription": "Hietzinger Kai 131, 1130 Wien",
+        "priorityLevel": 0,
+        "activityDeadline": "19/02/2025 3 pm",
+        "shownFeature": true
+    },
+    {
+        "id":"3",
+        "activityName":"Ophtalmologist",
+        "coverImage": "https://cdn.pixabay.com/photo/2018/08/17/20/01/eyes-3613710_1280.jpg",
+        "activityDescription": "Brunner G. 2/6, 2380 Perchtoldsdorf",
+        "priorityLevel": 0,
+        "activityDeadline": "20/02/2025 3 pm",
+        "shownFeature": true
+    },
+    {
+        "id":"4",
+        "activityName":"Physioterapist",
+        "coverImage": "https://cdn.pixabay.com/photo/2015/01/10/17/32/physiotherapy-595529_1280.jpg",
+        "activityDescription": "Tuersgasse 5, 1130 Wien",
+        "priorityLevel": 0,
+        "activityDeadline": "21/02/2025 3 pm",
+        "shownFeature": true
+    },
+    {
+        "id":"5",
+        "activityName":"Dietologist",
+        "coverImage": "https://cdn.pixabay.com/photo/2020/08/21/18/53/healthy-5506822_1280.jpg",
+        "activityDescription": "Alser Str. 25/7, 1080 Wien",
+        "priorityLevel": 0,
+        "activityDeadline": "24/02/2025 3 pm",
+        "shownFeature": true
+    }, 
+    {
+        "id":"6",
+        "activityName":"Psychologist",
+        "coverImage": "https://cdn.pixabay.com/photo/2017/08/16/14/21/psychology-2647941_1280.jpg", 
+        "activityDescription": "Viktor-Adler-Platz 1/2/8, 1100 Wien",
+        "priorityLevel": 0,
+        "activityDeadline": "25/02/2025 3 pm",
+        "shownFeature": true
+    },
+    {
+        "id":"7",
+        "activityName":"Endocrinologist",
+        "coverImage": "https://cdn.pixabay.com/photo/2022/07/13/12/02/serotonin-7319161_1280.jpg",
+        "activityDescription": "Mariahilfer Str. 114/Stiege 2/ Top 2, 1070 Wien",
+        "priorityLevel": 0,
+        "activityDeadline": "26/02/2025 3 pm",
+        "shownFeature": true
+    }
+]

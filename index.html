@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="./css_folder/style.css">
+<!-- --- -->
+
+<body>
+    <!-- container -->
+    <div class="container-fluid">
+        <!-- header -->
+        <div class="header">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+                <div class="container-fluid d-flex align-items-space-between">
+                    <!-- Toggler with Dropdown -->
+                    <div class="dropdown">
+                        <span class="navbar-toggler-icon mx-3" style="color:white; cursor:pointer" data-bs-toggle="dropdown"></span>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            <li><a class="dropdown-item" href="#">Add Activity</a></li>
+                            <li><a class="dropdown-item" href="#">Set Alarm</a></li>
+                            <li><a class="dropdown-item" href="#">Change to Monthly Planner</a></li>
+                        </ul>
+                    </div>
+                    <!-- Navbar Brand and Main Links -->
+                    <a class="navbar-brand mx-3" href="#">MyPlanner</a>
+                    <a class="nav-link active text-white mx-3" href="#">Home</a>
+                    <a class="nav-link text-white mx-3" href="#">Tasks</a>
+                    <a class="nav-link text-white mx-3" href="#">Settings</a>
+                    <!-- Bell Icon Dropdown (Right-aligned) -->
+                    <div class="dropdown ms-auto">
+                        <i class="fa fa-bell mx-3 dropdown-toggle" style="color:white; cursor:pointer" data-bs-toggle="dropdown"></i>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Notifications</a></li>
+                            <li><a class="dropdown-item" href="#">Reminders</a></li>
+                            <li><a class="dropdown-item" href="#">Messages</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Hero Image -->
+            <div class="hero">
+                <p>Weekly Planner</p>
+            </div>
+            <!-- ---------- -->
+        </div>
+        <!-- -------- -->
+    </div>   
+    <!-- -------- -->
+    <div class="container">
+        <!-- Header of Card Container -->
+        <div class="end-header">
+            <p>Weekly Tasks</p>
+            <span>
+                <button class="btn btn-secondary mx-3" id="add-btn">Add Task</button>
+                <button class="btn btn-secondary mx-3" id="save-btn">Save Plan</button>
+                <button class="btn btn-secondary mx-3" id="clear-storage-btn">Reset All</button>
+                <button class="btn btn-secondary mx-3" id="reset-priority-btn">Reset Priority</button>
+                <button class="btn btn-secondary mx-3" id="sort-btn">Sort by priority <i class="fa-solid fa-sort"></i></button>
+            </span>
+        </div>
+        <!-- Card Container -->
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1" id="result"></div>
+    </div>
+    <!-- Footer -->
+    <div class="container-fluid">
+        <footer class="bg-dark text-light text-center py-4">
+            <div class="container">
+                <!-- Social Media Icons -->
+                <div class="my-5">
+                    <a href="#" class="text-light mx-3 icon-social"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-light mx-3 icon-social"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light mx-3 icon-social"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <!-- Newsletter Subscription Form -->
+                <div class="my-5">
+                    <h5>Subscribe to our Newsletter</h5>
+                    <form class="d-flex justify-content-center">
+                        <input type="email" class="form-control w-50 me-1" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+                <!-- privacy and terms -->
+                <p class="my-5">
+                    <a href="#" class="text-light mx-3">Privacy Policy</a> |
+                    <a href="#" class="text-light mx-3">Terms of Service</a>
+                </p>
+                <!-- Copyright notice -->
+                <p class="my-3">&copy; 2025 Your Company. All rights reserved.</p>
+            </div>
+        </footer>        
+    </div>
+
+    <!-- Modal Form for Adding a Task -->
+    <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="taskModalLabel">Add New Task</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <form id="taskForm">
+                <div class="mb-3">
+                <label for="taskTitle" class="form-label">Activity Name</label>
+                <input type="text" class="form-control" id="taskTitle" required>
+                </div>
+                <div class="mb-3">
+                <label for="taskImage" class="form-label">Cover Image URL</label>
+                <input type="url" class="form-control" id="taskImage" required>
+                </div>
+                <div class="mb-3">
+                <label for="taskDescription" class="form-label">Activity Description</label>
+                <textarea class="form-control" id="taskDescription" required></textarea>
+                </div>
+                <div class="mb-3">
+                <label for="taskPriority" class="form-label">Priority Level (0-5)</label>
+                <input type="number" class="form-control" id="taskPriority" min="0" max="5" required>
+                </div>
+                <div class="mb-3">
+                <label for="taskDeadline" class="form-label">Activity Deadline</label>
+                <input type="datetime-local" class="form-control" id="taskDeadline" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Task</button>
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- ------ -->
+    <!-- JavaScript -->
+    <script src="js_folder/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- -------- -->
+</body>
+</html>

@@ -1,0 +1,73 @@
+.hero {
+    /* border: 1px solid black; */
+    height: 50vh;
+    position: relative;
+    background-image: url("https://cdn.pixabay.com/photo/2018/06/20/07/33/planner-3485976_1280.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    p {
+        /* border: 1px solid black; */
+        padding: 2rem;
+        position: absolute;
+        left: 40%;
+        top: 40%;
+        font-size: 2rem;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.end-header {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem;
+
+    p {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+}
+
+.card {
+    margin: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.1rem;
+    transition: opacity 0.5s ease;
+    .header-card {
+        display: flex;
+        justify-content: space-between;
+        margin : 0.5rem;
+
+        span i {
+            margin: 0.6rem;
+        }
+    }
+
+    .card-body {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        span {
+            display: flex;
+            justify-content: end;
+
+            * {
+                margin : 0.3rem;
+            }
+        }
+    }
+}
+
+#result {
+    margin: 0;
+    margin-inline: auto;
+}
+
+.icon-social {
+    font-size: 2rem;
+}
